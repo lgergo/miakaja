@@ -42,7 +42,7 @@ class AddIngredientFragment : Fragment(R.layout.fragment_add_ingredient), MenuPr
         val menuHost: MenuHost =requireActivity()
         menuHost.addMenuProvider(this,viewLifecycleOwner, Lifecycle.State.RESUMED)
 
-        ingredientViewModel=(activity as MainActivity).ingredinetViewModel
+        ingredientViewModel=(activity as MainActivity).ingredientViewModel
         addIngredientView=view
     }
 

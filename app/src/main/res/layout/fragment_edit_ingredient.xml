@@ -26,23 +26,12 @@
             android:id="@+id/editIngredientName"
             android:layout_width="match_parent"
             android:layout_height="60dp"
-            android:hint="Enter the title"
+            android:hint="Enter name"
             android:padding="12dp"
             android:textSize="20sp"
             android:layout_below="@id/editIngredientHeading"
             android:layout_marginTop="16dp"
             android:maxLines="1"/>
-
-        <EditText
-            android:id="@+id/editIngredientQuantity"
-            android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:hint="Enter the description"
-            android:gravity="top"
-            android:padding="12dp"
-            android:textSize="18sp"
-            android:layout_below="@id/editIngredientName"
-            android:layout_marginTop="12dp" />
 
         <com.google.android.material.floatingactionbutton.FloatingActionButton
             android:id="@+id/editIngredientFab"

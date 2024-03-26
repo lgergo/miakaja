@@ -13,7 +13,7 @@ import com.example.miakaja.viewmodel.IngredientViewModelFactory
 
 class MainActivity : AppCompatActivity() {
 
-    lateinit var ingredinetViewModel:IngredientViewModel
+    lateinit var ingredientViewModel:IngredientViewModel
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -31,6 +31,6 @@ class MainActivity : AppCompatActivity() {
     private fun setupViewModel(){
         val menuRepository = MenuRepository(MenuDatabase(this))
         val viewModelProviderFactory=IngredientViewModelFactory(application,menuRepository)
-        ingredinetViewModel=ViewModelProvider(this,viewModelProviderFactory)[IngredientViewModel::class.java]
+        ingredientViewModel=ViewModelProvider(this,viewModelProviderFactory)[IngredientViewModel::class.java]
     }
 }

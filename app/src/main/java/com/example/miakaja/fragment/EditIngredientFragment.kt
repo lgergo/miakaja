@@ -46,7 +46,7 @@ class EditIngredientFragment : Fragment(R.layout.fragment_edit_ingredient), Menu
         val menuHost: MenuHost =requireActivity()
         menuHost.addMenuProvider(this,viewLifecycleOwner, Lifecycle.State.RESUMED)
 
-        ingredientViewModel=(activity as MainActivity).ingredinetViewModel
+        ingredientViewModel=(activity as MainActivity).ingredientViewModel
         currentIngredient= args.ingredient!!
 
         binding.editIngredientName.setText(currentIngredient.name)

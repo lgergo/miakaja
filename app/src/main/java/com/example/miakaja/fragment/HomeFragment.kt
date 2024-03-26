@@ -45,7 +45,7 @@ class HomeFragment : Fragment(R.layout.fragment_home), SearchView.OnQueryTextLis
         val menuHost: MenuHost =requireActivity()
         menuHost.addMenuProvider(this,viewLifecycleOwner,Lifecycle.State.RESUMED)
 
-        ingredientViewModel=(activity as MainActivity).ingredinetViewModel
+        ingredientViewModel=(activity as MainActivity).ingredientViewModel
         setupHomeRecycleView()
 
         binding.addIngredientFab.setOnClickListener{
@@ -56,12 +56,12 @@ class HomeFragment : Fragment(R.layout.fragment_home), SearchView.OnQueryTextLis
     private fun updateUI(ingredient:List<Ingredient>?){
         if(ingredient != null){
             if(ingredient.isNullOrEmpty()){
-                binding.emptyIngredientsImage.visibility=View.GONE
-                binding.homeRecyclerView.visibility=View.VISIBLE
-            }
-            else{
                 binding.emptyIngredientsImage.visibility=View.VISIBLE
                 binding.homeRecyclerView.visibility=View.GONE
+            }
+            else{
+                binding.emptyIngredientsImage.visibility=View.GONE
+                binding.homeRecyclerView.visibility=View.VISIBLE
             }
         }
     }
