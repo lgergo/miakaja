@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/nav_graph"
+    app:startDestination="@id/homeFragment">
+
+    <fragment
+        android:id="@+id/homeFragment"
+        android:name="com.example.miakaja.fragment.HomeFragment"
+        android:label="HomeFragment" >
+        <action
+            android:id="@+id/action_homeFragment_to_editIngredientFragment"
+            app:destination="@id/editIngredientFragment" />
+        <action
+            android:id="@+id/action_homeFragment_to_addIngredientFragment"
+            app:destination="@id/addIngredientFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/editIngredientFragment"
+        android:name="com.example.miakaja.fragment.EditIngredientFragment"
+        android:label="EditIngredientFragment" >
+        <action
+            android:id="@+id/action_editIngredientFragment_to_homeFragment"
+            app:destination="@id/homeFragment" />
+        <argument
+            android:name="ingredient"
+            app:argType="com.example.miakaja.model.Ingredient"
+            app:nullable="true"/>
+    </fragment>
+    <fragment
+        android:id="@+id/addIngredientFragment"
+        android:name="com.example.miakaja.fragment.AddIngredientFragment"
+        android:label="AddIngredientFragment" >
+        <action
+            android:id="@+id/action_addIngredientFragment_to_homeFragment"
+            app:destination="@id/homeFragment" />
+    </fragment>
+</navigation>
